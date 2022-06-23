@@ -20,7 +20,7 @@ app.add_middleware(
 
 
 @app.post('/')
-async def get_car_price(params: Params):
+async def check_keyword(params: Params):
 
     keyword = params.keyword
 
