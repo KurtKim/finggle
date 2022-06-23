@@ -1,4 +1,4 @@
-# car-whale-prototype
+# finggle
 
 Build the images and spin up the containers:
 
