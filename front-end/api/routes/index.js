@@ -1,9 +1,9 @@
 import { Router } from 'express'
 
-// import Auth from './auth'
+import Search from './search'
 
 const router = Router()
 
-// router.use('/auth', Auth)
+router.use('/search', Search)
 
 export default router
