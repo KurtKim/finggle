@@ -22,6 +22,7 @@
     "express": "^4.18.1",
     "node-rsa": "^1.1.1",
     "nuxt": "^2.15.7",
-    "sync-request": "^6.1.0"
+    "sync-request": "^6.1.0",
+    "vue-element-loading": "^2.0.2"
   }
 }

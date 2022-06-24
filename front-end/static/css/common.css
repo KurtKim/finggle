@@ -1,0 +1,48 @@
+
+.search-container {
+    margin-top: 60%;
+}
+
+.logo {
+    color: #6667AB; 
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.search-form {
+    border: solid #6667AB 1px;
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.search-form > input {
+    border: none;
+    margin-left: 20px;
+}
+
+.search-form > input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.search-form > button {
+    background-color: transparent;
+    border: none;
+    color: #6667AB;
+    font-size: 20px;
+}
+
+.search-form > button:active, .search-form > button:hover, .search-form > button:focus {
+    background-color: transparent !important;
+    border: none !important;
+    color: #6667AB !important;
+    box-shadow: none !important;
+}
+
+.stt-loader {
+    margin-left: 50%;
+    bottom: 0;
+    margin-bottom: 30%;
+    position: absolute;
+}

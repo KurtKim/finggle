@@ -2,7 +2,8 @@ import api from '@/utils/axios'
 
 export const state = () => ({ 
     is_loading: false,
-    keyword: ''
+    is_stt: false,
+    keyword: '',
 })
 
 export const mutations = {
@@ -11,6 +12,9 @@ export const mutations = {
     },
     MU_KEYWORD: (state, payload) => {
         state.keyword = payload
+    },
+    MU_IS_STT: (state, payload) => {
+        state.is_stt = payload
     }
 }
 
