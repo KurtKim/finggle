@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="margin-top: 5px;">
         <b class="logo">
             Finggle
         </b>
