@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from 'vuex'
+import { mapMutations, mapActions } from 'vuex'
 
 export default {
     data () {
