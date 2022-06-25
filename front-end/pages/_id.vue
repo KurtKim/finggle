@@ -19,6 +19,11 @@
                         <CInsurance :data="data" />
                     </template>
                 </template>
+                <template v-else>
+                    <template v-if="type === 'etc'">
+                        <CEtc />
+                    </template>
+                </template>
             </div>
         </b-col>
     </b-container>
@@ -56,6 +61,8 @@ export default {
             } else if (id === "3") {
                 this.updateType('insurance')
                 this.getInsurance()
+            } else if (id === "4") {
+                this.updateType('etc')
             }
         }
     }

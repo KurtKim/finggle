@@ -41,9 +41,10 @@ async def check_keyword(params: Params):
         '카드',
         '내 보험 가입 내역',
         '내 보험',
-        '내가 가입 되어있는 보험 내역 보여줘']
+        '내가 가입 되어있는 보험 내역 보여줘',
+        '방금 결제 내역 더치페이 할게']
     columns = ['question', 'encoded', 'page', 'score']
-    page = [0, 0, 0, 0, 1, 1, 1, 2, 2, 2]
+    page = [0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 3]
 
     question_dataset = pd.DataFrame(columns=columns)
     encoded = []
