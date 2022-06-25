@@ -1,8 +1,8 @@
 <template>
     <div style="margin-top: 5px;">
-        <b class="logo">
-            Finggle
-        </b>
+        <a href="/">
+            <b class="logo">Finggle</b>
+        </a>
         <div class="search-form">
             <b-input 
                 class="search-input"
@@ -13,6 +13,14 @@
                 <font-awesome-icon :icon="['fas', 'microphone']"/>
             </b-button>
         </div>
+
+        <template v-if="is_btn">
+            <div class="bottom-btn">
+                <b-button @click="toggleSTT">
+                    <font-awesome-icon :icon="['fas', 'microphone']"/>
+                </b-button>
+            </div>
+        </template>
     </div>
 </template>
 
@@ -20,6 +28,9 @@
 import { mapState, mapMutations, mapActions } from 'vuex'
 
 export default {
+    props: {
+        is_btn: Boolean
+    },
     computed: {
         ...mapState('search', {
             is_loading: state => state.is_loading,

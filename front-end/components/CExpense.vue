@@ -21,10 +21,48 @@
             <div><b style="color: #666;">항목별 소비현황</b></div>
             <template v-for="(item, index) in getListByKeys(data)">
                 <div :key="`paid-list-${index}`" style="display: flex; align-items: center; margin: 5px 0;">
-                    <div :style="getColor(index)" style="width: 40px; height:20px; margin-right: 5px;"></div>
-                    {{ item[0] }} {{ item[1].toLocaleString() }}원
+                    <div :style="`background-color: ${item.color}`" style="width: 40px; height:20px; margin-right: 5px;"></div>
+                    {{ item.key }} {{ item.value.toLocaleString() }}원
                 </div>
             </template>
+        </b-card>
+
+        <br/>
+
+        <b-card class="keyword-card">
+            <div>
+                <font-awesome-icon 
+                    style="margin-right: 5px;"
+                    :icon="['fas', 'circle-check']"/>
+                <b>이런 카드는 어때요?</b>
+            </div>
+
+            <br/>
+
+            <div style="display: flex; align-items: center;">
+                <img src="/images/card1.png" style="width: 80px; margin-right: 10px;"/>
+                <div style="font-size: 14px;">
+                    <div><b>우리카드</b></div>
+                    <div>쇼핑 <b>14,000</b>원 절약 가능</div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+                <img src="/images/card2.png" style="width: 80px; margin-right: 10px;"/>
+                <div style="font-size: 14px;">
+                    <div><b>삼성카드</b></div>
+                    <div>쇼핑 <b>12,000</b>원 절약 가능</div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+                <img src="/images/card3.png" style="width: 80px; margin-right: 10px;"/>
+                <div style="font-size: 14px;">
+                    <div><b>롯데카드</b></div>
+                    <div>쇼핑 <b>9,000</b>원 절약 가능</div>
+                </div>
+            </div>
+
         </b-card>
 
         <br/>
@@ -52,10 +90,15 @@ export default {
                 .toLocaleString()
         },
         getListByKeys (data) {
+            const _this = this
             const datasets = this.paidByKeys(data)
             return datasets.labels.map((e, i) => {
-                return [e, datasets.data[i]];
-            })
+                return {
+                    key: e,
+                    value: datasets.data[i],
+                    color: _this.backgroundColor[i]
+                }
+            }).sort((a, b) => b.value - a.value)
         },
         paidByKeys (data) {
             const header = new Set(data.list.map(it => it.store_cat))
@@ -93,9 +136,6 @@ export default {
                     },
                 },
             }
-        },
-        getColor (index) {
-            return `background-color: ${this.backgroundColor[index]}`
         }
     }
 }

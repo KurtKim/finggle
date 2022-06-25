@@ -34,6 +34,46 @@
                 </div>
             </template>
         </b-card>
+
+        <br/>
+
+        <b-card class="keyword-card">
+            <div>
+                <font-awesome-icon 
+                    style="margin-right: 5px;"
+                    :icon="['fas', 'circle-check']"/>
+                <b>이런 카드는 어때요?</b>
+            </div>
+
+            <br/>
+
+            <div style="display: flex; align-items: center;">
+                <img src="/images/card1.png" style="width: 80px; margin-right: 10px;"/>
+                <div style="font-size: 14px;">
+                    <div><b>우리카드</b></div>
+                    <div>기존실적 기준 <b>200,000</b>원</div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+                <img src="/images/card2.png" style="width: 80px; margin-right: 10px;"/>
+                <div style="font-size: 14px;">
+                    <div><b>삼성카드</b></div>
+                    <div>기존실적 기준 <b>250,000</b>원</div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+                <img src="/images/card3.png" style="width: 80px; margin-right: 10px;"/>
+                <div style="font-size: 14px;">
+                    <div><b>롯데카드</b></div>
+                    <div>기존실적 기준 <b>300,000</b>원</div>
+                </div>
+            </div>
+
+        </b-card>
+
+        <br/>
     </div>
 </template>
 

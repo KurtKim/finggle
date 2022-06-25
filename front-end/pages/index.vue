@@ -3,7 +3,7 @@
         <b-row>
             <b-col sm="12">
                 <div class="search-container">
-                    <SearchBar />
+                    <SearchBar :is_btn="false" />
                 </div>
 
                 <br/><br/><br/>
@@ -14,7 +14,7 @@
                             <font-awesome-icon 
                                 style="margin-right: 5px;"
                                 :icon="['fas', 'circle-check']"/>
-                            이런거도 이용해 보세요
+                            이런 질문은 어때요?
                         </b>
                     </div>
 

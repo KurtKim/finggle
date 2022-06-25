@@ -58,5 +58,16 @@ export const actions = {
             commit('MU_DATA', res.data)
             commit('MU_LOADING', false)
         })
+    },
+    AC_INSURANCE: ({ commit }) => {
+        commit('MU_LOADING', true)
+        
+        return api({
+            url: `/insurance`,
+            method: 'get'
+        }).then(res => {
+            commit('MU_DATA', res.data)
+            commit('MU_LOADING', false)
+        })
     }
 }

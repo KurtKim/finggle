@@ -1,8 +1,8 @@
 <template>
     <b-container>
         <b-col sm="12">
-            <div>
-                <SearchBar />
+            <div style="margin-top: 10px;">
+                <SearchBar :is_btn="true" />
             </div>
 
             <hr />
@@ -14,6 +14,9 @@
                     </template>
                     <template v-else-if="type === 'card'">
                         <CCard :data="data" />
+                    </template>
+                    <template v-else-if="type === 'insurance'">
+                        <CInsurance :data="data" />
                     </template>
                 </template>
             </div>
@@ -40,7 +43,8 @@ export default {
         }),
         ...mapActions('detail', {
             getExpense: 'AC_EXPENSE',
-            getCard: 'AC_CARD'
+            getCard: 'AC_CARD',
+            getInsurance: 'AC_INSURANCE'
         }),
         initByType (id) {
             if (id === "1") {
@@ -49,6 +53,9 @@ export default {
             } else if (id === "2") {
                 this.updateType('card')
                 this.getCard()
+            } else if (id === "3") {
+                this.updateType('insurance')
+                this.getInsurance()
             }
         }
     }
