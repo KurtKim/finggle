@@ -30,7 +30,7 @@
             </b-card>
         </template>
 
-        <b-card class="keyword-card" style="margin-top: 10px;">
+        <b-card class="keyword-card" style="margin-top: 20px;">
             <div>
                 <font-awesome-icon 
                     style="margin-right: 5px;"
