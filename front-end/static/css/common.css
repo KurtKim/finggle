@@ -66,3 +66,9 @@
     background-color: #6667AB;
     box-shadow: 1px 1px 1px #8398d1;
 }
+
+.main-loading {
+    margin-left: 50%;
+    top: 50%;
+    position: fixed;
+}

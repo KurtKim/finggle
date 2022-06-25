@@ -1,4 +1,5 @@
 import api from '@/utils/axios'
+import axios from 'axios'
 
 export const state = () => ({ 
     is_loading: false,
@@ -21,13 +22,22 @@ export const mutations = {
 export const actions = {
     AC_SEARCH: ({ dispatch, commit, state }) => {
         commit('MU_LOADING', true)        
-        return api({
-            url: `/search`,
-            method: 'post',
-            data: { keyword: state.keyword }
-        }).then(res => {
+        // return api({
+        //     url: `/search`,
+        //     method: 'post',
+        //     data: { keyword: state.keyword }
+        // }).then(res => {
+        //     commit('MU_LOADING', false)
+        //     return res.data.id
+        // })
+        return axios.post(
+            'http://127.0.0.1:8000',
+            { keyword: state.keyword }
+        ).then(res => {
             commit('MU_LOADING', false)
-            return res.data.id
+            const data = JSON.parse(res.data)
+            console.log(data)
+            return data.id
         })
     }
 }

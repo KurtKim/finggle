@@ -1,19 +1,22 @@
 <template>
     <div>
         <div>
-            <Nuxt />
-
-            <vue-element-loading 
-                :active="is_loading" 
-                spinner="spinner" 
-                color="#6667AB"
-                :is-full-screen="false" />
+            <Nuxt /> 
         </div>
         <div class="stt-loader">
             <div>
                 <vue-element-loading 
                     :active="is_stt" 
                     spinner="bar-fade-scale" 
+                    color="#6667AB"
+                    :is-full-screen="false" />
+            </div>
+        </div>
+        <div class="main-loading">
+            <div>
+                <vue-element-loading 
+                    :active="is_loading" 
+                    spinner="spinner" 
                     color="#6667AB"
                     :is-full-screen="false" />
             </div>

@@ -43,8 +43,8 @@ export default {
     data () {
         return {
             keywords: [
-                { key: 1, value: '지난달에 얼마 썼어?' },
-                { key: 2, value: '저번달 카드 실적 보여줘' },
+                { key: 1, value: '이번 달에 얼마 썼어?' },
+                { key: 2, value: '이번달 카드 실적 보여줘' },
                 { key: 3, value: '내가 가입되어있는 보험 내역 보여줘' },
             ]
         }
@@ -59,7 +59,7 @@ export default {
         clickKeyword(item) {
             this.updateKeyword(item.value)
             this.searchKeyword()
-                .then(id => this.$router.push(`/${id}`) )
+                .then(id => this.$router.push(`/${id}`))
         }
     }
 }

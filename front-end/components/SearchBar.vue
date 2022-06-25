@@ -79,7 +79,7 @@ export default {
                 this.recognition.stop()
                 this.updateIsSTT(false)
                 this.searchKeyword()
-                    .then(id => this.$router.push(`/${id}`) )
+                    .then(id => this.$router.push(`/${id}`))
             } else {
                 this.recognition.start()
                 this.updateIsSTT(true)
@@ -87,7 +87,7 @@ export default {
         },
         search () {
             this.searchKeyword()
-                .then(id => this.$router.push(`/${id}`) )
+                .then(id => this.$router.push(`/${id}`))
         }
     }
 }

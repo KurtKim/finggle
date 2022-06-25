@@ -31,8 +31,11 @@ async def check_keyword(params: Params):
     print(keyword)
 
     encoder = SentenceTransformer('./models')
-    questions = ['지난 달에 얼마 썼어?', '저번달 카드 실적 보여줘', '내가 가입되어있는 보험 내역 보여줘']
+    questions = ['이번 달에 내가 사용한 금액이 얼마야?', '이번 달 나의 지출금액', '이번 달에 내가 돈을 얼마나 썼지?','소비 내역',
+        '이번 달에 내 카드 실적 보여줘', '신용카드 실적 충족내역', '카드',
+        '내 보험 가입 내역', '내 보험', '내가 가입 되어있는 보험 내역 보여줘']
     columns = ['question', 'encoded', 'page', 'score']
+    page = [0, 0, 0, 0, 1, 1, 1, 2, 2, 2]
 
     question_dataset = pd.DataFrame(columns=columns)
     encoded = []
@@ -40,13 +43,12 @@ async def check_keyword(params: Params):
         embeddings = encoder.encode(each)
         encoded.append(embeddings)
 
-    page = range(len(questions))
     question_dataset['question'] = questions
     question_dataset['encoded'] = encoded
     question_dataset['page'] = page
 
-    def cos_sim(A,B):
-        return dot(A,B)/(norm(A)*norm(B))
+    def cos_sim(A, B):
+        return dot(A, B)/(norm(A)*norm(B))
 
     try: 
         embedding = encoder.encode(keyword)

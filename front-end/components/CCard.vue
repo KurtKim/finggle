@@ -1,16 +1,18 @@
 <template>
     <div>
-        <b-card>
+        <b-card class="keyword-card">
             <template v-for="(item, index) in data.list">
                 <div 
                     :key="`card-list-${index}`"
                     style="display: flex; align-items: center;">
                     <div style="margin-right: 10px;"><b>{{ item.cards }}</b></div>
                     <div style="width: 75%;">
-                        <div style="width: 100%; height: 20px; background-color: #e6e6e6;">
+                        <div style="width: 100%; height: 20px; background-color: #e6e6e6; position: relative;">
                             <div 
                                 :style="getBarGraph(index, item)"
                                 style="height: 100%; max-width: 100%;"></div>
+                            <div style="position: absolute; top: 0; font-size: 13px; width: 100%; text-align: center; color: #666;">
+                                {{ item.payAmount.toLocaleString() }} / {{ item.target.toLocaleString() }}</div>
                         </div>
                     </div>
                 </div>
@@ -19,13 +21,8 @@
 
         <br/>
 
-        <b-card class="keyword-card">
-            <div><b>6</b>월 {{ data.list.filter(it => it.payAmount >= it.target).map(it => `'${it.cards}'`).join(',') }}의 실적이 충족되었습니다.</div>
-        </b-card>
-
-        <br/>
-
         <b-card>
+            <div style="margin-bottom: 10px;"><b>6</b>월달 기준</div>
             <template v-for="(item, index) in data.list">
                 <div 
                     :key="`card-paid-list-${index}`">
@@ -42,7 +39,7 @@
                 <font-awesome-icon 
                     style="margin-right: 5px;"
                     :icon="['fas', 'circle-check']"/>
-                <b>이런 카드는 어때요?</b>
+                <b>실적 조건이 낮은 이런 카드는 어때요?</b>
             </div>
 
             <br/>
