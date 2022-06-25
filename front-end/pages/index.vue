@@ -44,8 +44,8 @@ export default {
         return {
             keywords: [
                 { key: 1, value: '지난달에 얼마 썼어?' },
-                { key: 2, value: '내가 쓰는 삼성카드 실적 충족했어?' },
-                { key: 3, value: '현재 지출이 많은 곳은 어디야?' },
+                { key: 2, value: '저번달 카드 실적 보여줘' },
+                { key: 3, value: '내가 가입되어있는 보험 내역 보여줘' },
             ]
         }
     },
@@ -54,10 +54,12 @@ export default {
             updateKeyword: 'MU_KEYWORD',
         }),
         ...mapActions('search', {
-            search: 'AC_SEARCH'
+            searchKeyword: 'AC_SEARCH'
         }),
         clickKeyword(item) {
             this.updateKeyword(item.value)
+            this.searchKeyword()
+                .then(id => this.$router.push(`/${id}`) )
         }
     }
 }

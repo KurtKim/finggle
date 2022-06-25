@@ -91,3 +91,5 @@ sw.*
 
 __pycache__
 .vs
+
+/back-end/models

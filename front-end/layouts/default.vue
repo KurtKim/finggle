@@ -2,6 +2,12 @@
     <div>
         <div>
             <Nuxt />
+
+            <vue-element-loading 
+                :active="is_loading" 
+                spinner="spinner" 
+                color="#6667AB"
+                :is-full-screen="false" />
         </div>
         <div class="stt-loader">
             <div>
@@ -24,7 +30,8 @@ export default {
     },
     computed: { 
         ...mapState('search', {
-            is_stt: state => state.is_stt
+            is_stt: state => state.is_stt,
+            is_loading: state => state.is_loading
         })
     }
 }

@@ -20,16 +20,14 @@ export const mutations = {
 
 export const actions = {
     AC_SEARCH: ({ dispatch, commit, state }) => {
-        console.log(state.keyword)
-        // commit('MU_LOADING', true)
-        
-        // return api({
-        //     url: `/search`,
-        //     method: 'post',
-        //     data: { keyword: state.keyword }
-        // }).then(res => {
-        //     console.log(res)
-        //     commit('MU_LOADING', false)
-        // })
+        commit('MU_LOADING', true)        
+        return api({
+            url: `/search`,
+            method: 'post',
+            data: { keyword: state.keyword }
+        }).then(res => {
+            commit('MU_LOADING', false)
+            return res.data.id
+        })
     }
 }

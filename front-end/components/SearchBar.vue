@@ -72,17 +72,22 @@ export default {
             updateIsSTT: 'MU_IS_STT'
         }),
         ...mapActions('search', {
-            search: 'AC_SEARCH'
+            searchKeyword: 'AC_SEARCH'
         }),
         toggleSTT () {
             if (this.is_stt) {
                 this.recognition.stop()
                 this.updateIsSTT(false)
-                this.search()
+                this.searchKeyword()
+                    .then(id => this.$router.push(`/${id}`) )
             } else {
                 this.recognition.start()
                 this.updateIsSTT(true)
             }
+        },
+        search () {
+            this.searchKeyword()
+                .then(id => this.$router.push(`/${id}`) )
         }
     }
 }
