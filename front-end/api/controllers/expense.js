@@ -51,7 +51,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "신한카드",
                   "paid_date": "22-06-18",
                   "paid_time": "06:00:47",
-                  "paid_amt": 35484,
+                  "paid_amt": 25484,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },
@@ -87,7 +87,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "신한카드",
                   "paid_date": "22-06-13",
                   "paid_time": "10:09:30",
-                  "paid_amt": 44697,
+                  "paid_amt": 14697,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },
@@ -150,7 +150,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "삼성카드",
                   "paid_date": "22-06-05",
                   "paid_time": "19:33:12",
-                  "paid_amt": 13047,
+                  "paid_amt": 3047,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "다이소혜화점"
                 },
@@ -195,7 +195,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "우리카드",
                   "paid_date": "22-06-26",
                   "paid_time": "02:56:30",
-                  "paid_amt": 27504,
+                  "paid_amt": 7504,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "다이소혜화점"
                 },
@@ -231,7 +231,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "우리카드",
                   "paid_date": "22-06-21",
                   "paid_time": "05:54:14",
-                  "paid_amt": 44856,
+                  "paid_amt": 14856,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "다이소혜화점"
                 },
@@ -240,7 +240,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "우리카드",
                   "paid_date": "22-06-01",
                   "paid_time": "23:56:28",
-                  "paid_amt": 47396,
+                  "paid_amt": 7396,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "무신사"
                 },
@@ -276,7 +276,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "우리카드",
                   "paid_date": "22-06-17",
                   "paid_time": "03:03:22",
-                  "paid_amt": 35918,
+                  "paid_amt": 5918,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },
@@ -294,7 +294,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "신한카드",
                   "paid_date": "22-06-24",
                   "paid_time": "22:02:44",
-                  "paid_amt": 27429,
+                  "paid_amt": 7429,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "무신사"
                 },
@@ -321,7 +321,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "신한카드",
                   "paid_date": "22-06-16",
                   "paid_time": "17:57:30",
-                  "paid_amt": 32545,
+                  "paid_amt": 2545,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },
@@ -402,7 +402,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "삼성카드",
                   "paid_date": "22-06-23",
                   "paid_time": "21:37:22",
-                  "paid_amt": 14057,
+                  "paid_amt": 4057,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },
@@ -447,7 +447,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "삼성카드",
                   "paid_date": "22-06-27",
                   "paid_time": "09:12:04",
-                  "paid_amt": 44244,
+                  "paid_amt": 4244,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "무신사"
                 },
@@ -564,7 +564,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "신한카드",
                   "paid_date": "22-06-29",
                   "paid_time": "20:05:08",
-                  "paid_amt": 44584,
+                  "paid_amt": 4584,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "다이소혜화점"
                 },
@@ -627,7 +627,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "삼성카드",
                   "paid_date": "22-06-05",
                   "paid_time": "12:43:02",
-                  "paid_amt": 18101,
+                  "paid_amt": 8101,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },
@@ -663,7 +663,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "신한카드",
                   "paid_date": "22-06-15",
                   "paid_time": "20:36:40",
-                  "paid_amt": 30940,
+                  "paid_amt": 10940,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "다이소혜화점"
                 },
@@ -672,7 +672,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "삼성카드",
                   "paid_date": "22-06-26",
                   "paid_time": "14:55:42",
-                  "paid_amt": 13609,
+                  "paid_amt": 3609,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "무신사"
                 },
@@ -690,7 +690,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "우리카드",
                   "paid_date": "22-06-01",
                   "paid_time": "20:48:03",
-                  "paid_amt": 32317,
+                  "paid_amt": 2317,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },
@@ -717,7 +717,7 @@ export default class ExpenseController extends Controller {
                   "card_value": "우리카드",
                   "paid_date": "22-06-09",
                   "paid_time": "18:25:05",
-                  "paid_amt": 38540,
+                  "paid_amt": 8540,
                   "store_cat": "쇼핑",
                   "merchant_name_masked": "교보문고"
                 },

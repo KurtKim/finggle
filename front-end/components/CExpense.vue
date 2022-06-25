@@ -32,24 +32,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
     props: {
         data: Object
     },
-    data () {
-        return {
-            backgroundColor: [
-                'rgba(128, 133, 255, 0.5)',
-                'rgba(255, 180, 179, 0.5)',
-                'rgba(197, 70, 204, 0.5)',
-                'rgba(255, 230, 128, 0.5)',
-                'rgba(204, 100, 1, 0.5)',
-                'rgba(230, 106, 103, 0.5)',
-                'rgba(80, 230, 128, 0.5)',
-                'rgba(0, 209, 193 , 0.5)',
-                'rgba(41, 49, 204, 0.5)'
-            ]
-        }
+    computed: {
+        ...mapState('detail', {
+            backgroundColor: state => state.backgroundColor,
+        })
     },
     methods: {
         getPaidSum (data) {
